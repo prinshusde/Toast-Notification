@@ -22,7 +22,7 @@ const useNotification = (position="top-right")=>{
     },[])
 
     const NotificationComponent = notifications?(
-         <div className={`notification-container ${position}`}>
+         <div className={`notification-container ${position} ${position.split("-")[0]}`}>
             {
                 notifications.map((notification)=>{
                     return <Notification key={notification.id} {...notification} onClose={()=>{}}/>

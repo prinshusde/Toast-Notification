@@ -101,3 +101,11 @@
   align-items: flex-end;
   flex-direction: column;
 }
+
+.notification-container.bottom{
+   flex-direction: column-reverse;
+}
+
+.notification-container.top{
+    flex-direction: column;
+}

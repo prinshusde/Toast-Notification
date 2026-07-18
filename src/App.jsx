@@ -7,7 +7,7 @@ function App() {
 
   // cutome hook, useNotification(position)
 
-  const {NotificationComponent,triggerNotification} = useNotification("bottom-right")
+  const {NotificationComponent,triggerNotification} = useNotification("top-right")
 
   const onClose = ()=>{
     console.log("closed")
