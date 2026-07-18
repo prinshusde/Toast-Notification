@@ -95,3 +95,9 @@
 .popUp{
     animation: popup 0.5s ease-out;
 }
+
+.notification-container{
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
