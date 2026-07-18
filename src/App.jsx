@@ -2,10 +2,21 @@
 import './App.css'
 import Notification from './components/notification'
 import useNotification from './hooks/useNotification'
+import { toast } from "./toast";
 
 function App() {
 
   // cutome hook, useNotification(position)
+
+  const handleToast= ()=>{
+    toast.success("Downloaded successfully");
+    toast.error("Error Fetching Vendors");
+    toast.warning("Error Fetching Vendors");
+    toast.info("Error Fetching Vendors");
+
+  }
+
+
 
   const {NotificationComponent,triggerNotification} = useNotification("top-right")
 
@@ -54,6 +65,8 @@ function App() {
         duration:3000
       })
     }}>Trigger Error</button>
+      <button onClick={handleToast}
+    >Trigger Toast</button>
      </div>
 
      {NotificationComponent}
