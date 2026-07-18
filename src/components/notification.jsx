@@ -15,9 +15,16 @@ const icons={
 }
 
 
+const animations = {
+    fade:"fadeIn",
+    pop:"popUp",
+    slide:"slideIn"
+}
 
-const Notification = ({type="info",message,onClose})=>{
-   return <div className={`notification ${type}`}>
+
+
+const Notification = ({type="info",message,onClose,animation="slide"})=>{
+   return <div className={`notification ${type} ${animations[animation]}`}>
         {/* icons */}
         {icons[type]}
         {/* message */}
